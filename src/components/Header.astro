@@ -1,0 +1,41 @@
+---
+import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+<header>
+	<nav>
+		<Hamburger />
+		<ThemeIcon />
+		<Navigation />
+	</nav>
+</header>
+
+<style>
+	header {
+		position: fixed;
+		width: calc(100% - var(--body-padding) * 2);
+		height: var(--header-height);
+		top: 0;
+		padding: var(--header-padding) 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		background-color: white;
+		border-bottom: 0.7px solid #000;
+		z-index: 1;
+	}
+	nav {
+		width: 20rem;
+		min-width: fit-content;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		> a {
+			font-family: Poppins, sans-serif;
+			font-size: 16px;
+			font-weight: lighter;
+		}
+	}
+</style>

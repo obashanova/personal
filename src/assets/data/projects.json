@@ -1,0 +1,14 @@
+[
+	{
+		"href": "https://www.lodes.com/configurator/",
+		"src": "/src/assets/images/lodes.png",
+		"title": "Lodes",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+	},
+	{
+		"href": "https://rodaonline.com/configurator/",
+		"src": "/src/assets/images/roda.png",
+		"title": "Roda",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+	}
+]
