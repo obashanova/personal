@@ -3,12 +3,9 @@
 		"href": "https://www.lodes.com/configurator/",
 		"src": "/src/assets/images/lodes.png",
 		"title": "Lodes",
-		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-	},
-	{
-		"href": "https://rodaonline.com/configurator/",
-		"src": "/src/assets/images/roda.png",
-		"title": "Roda",
-		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+		"body": "Product configurator that allows users to create unique configurations and visualise them instantly. What I love most about this project is the 2D planner (built with Konva.js), which lets users arrange items to create unique configurations. It’s intuitive, dynamic, and adds a layer of creativity to the user experience.",
+		"features": [
+			"custom configurations builder", "2D planner", "3D visualisation", "composition summary", "save and share options", "GA integration"
+		]
 	}
 ]

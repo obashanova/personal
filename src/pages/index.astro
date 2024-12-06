@@ -10,9 +10,12 @@ import projects from "../assets/data/projects.json";
 	title="Oxana Bashanova | Home"
 >
 	<div class="main-container">
-		<section id="intro">
-			<h1>Hello!</h1>
-			<div class="intro-container">
+		<div class="photo-container">
+			<!-- <div class="photo"></div> -->
+		</div>
+		<div class="text-container">
+			<section id="intro">
+				<h1>Hello!</h1>
 				<div class="intro-p">
 					<p>
 						My name is Oxana Bashanova, I am a frontend developer passionate
@@ -26,188 +29,165 @@ import projects from "../assets/data/projects.json";
 							href="mailto: obashanova.dev@gmail.com"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="social-link"
-							style={{
-								textDecorationLine: "underline",
-								textDecorationThickness: "0.7px",
-								textUnderlineOffset: "0.5rem",
-							}}
+							class="social-link underline"
 						>
 							Email me.</a
 						>
 					</p>
 				</div>
-				<div class="photo-container">
-					<div class="photo"></div>
+			</section>
+
+			<section id="about">
+				<h1>About me</h1>
+				<p>
+					Hi, I'm Oxana, a frontend developer with a slightly unconventional
+					journey. <br />
+					I didn't start in tech — I actually have a PhD in Environmental Studies
+					and worked as a researcher. But after realizing that the world of research
+					wasn't for me, I stepped away from academia and, leveraging my multilingual
+					skills, pivoted to international sales. I spent a couple of years working
+					for Italian luxury furniture brands. <br />
+					However, it wasn't my dream job. While it taught me a lot about resilience,
+					problem-solving, and client relations, I craved something more creative
+					and challenging. After taking a break to recharge, I stumbled upon coding
+					— and I was hooked. With a knack for math and experience improving software
+					during my PhD, coding felt like the perfect fit. It started as a curiosity
+					but quickly turned into something I couldn't put down. Through online courses
+					and countless late-night problem-solving sessions, I taught myself frontend
+					development and gained hands-on experience. <br />
+					Today, I'm proud to have developed and maintained two large-scale React
+					applications that thousands of people use. I'm always looking for ways
+					to improve them as I learn new things. I genuinely love what I do — it's
+					challenging, but that's what makes it exciting! <br />
+					When I'm not coding, I'm busy raising a curious and kind little human,
+					experimenting in the kitchen, getting lost in a good book, or exploring
+					human behavior to understand the “why” behind it all. <br />
+				</p>
+			</section>
+			<section id="projects">
+				<h1>Projects</h1>
+				<p>
+					Here are some of the projects I've worked on. You can find more on my
+					<a>GitHub</a> page.
+				</p>
+				<div class="gallery">
+					{
+						projects.map((project) => {
+							return (
+								<Card
+									href={project.href}
+									src={project.src}
+									title={project.title}
+									body={project.body}
+									features={project.features}
+								/>
+							);
+						})
+					}
 				</div>
-			</div>
-		</section>
+			</section>
+			<section id="contacts">
+				<h1>Contacts</h1>
+				<p>
+					If you're curious about my work or want to collaborate, feel free to
+					reach out — I'd love to connect! You can find me on
 
-		<section id="about">
-			<h1>About me</h1>
-			<p>
-				Hi, I'm Oxana, a frontend developer with a slightly unconventional
-				journey. <br />
-				I didn't start in tech — I actually have a PhD in Environmental Studies and
-				worked as a researcher. But after realizing that the world of research wasn't
-				for me, I stepped away from academia and, leveraging my multilingual skills,
-				pivoted to international sales. I spent a couple of years working for italian
-				luxurious furniture brands. <br />
-				However, it wasn't my dream job. While it taught me a lot about resilience,
-				problem-solving, and client relations, I craved something more creative and
-				challenging. After taking a break to recharge, I stumbled upon coding — and
-				I was hooked. With a knack for math and experience improving software during
-				my PhD, coding felt like the perfect fit. It started as a curiosity but quickly
-				turned into something I couldn't put down. Through online courses and countless
-				late-night problem-solving sessions, I taught myself frontend development
-				and gained hands-on experience. <br />
-				Today, I'm proud to have developed and maintained two large-scale React applications
-				that thousands of people use. I'm always looking for ways to improve them
-				as I learn new things. I genuinely love what I do — it's challenging, but
-				that's what makes it exciting! <br />
-				When I'm not coding, I'm busy raising a curious and kind little human, experimenting
-				in the kitchen, getting lost in a good book, or exploring human behavior
-				to understand the “why” behind it all. <br />
-				If you're curious about my work or want to collaborate, feel free to reach
-				out — I'd love to connect! <br />
-			</p>
-			<p>
-				Go to <a href="#contacts" class="social-link">Contacts</a>.
-			</p>
-		</section>
-		<section id="projects">
-			<h1>Projects</h1>
-			<p>
-				Here are some of the projects I've worked on. You can find more on my
-				<a>GitHub</a> page.
-			</p>
-			<div class="gallery">
-				{
-					projects.map((project) => {
-						return (
-							<Card
-								href={project.href}
-								src={project.src}
-								title={project.title}
-								body={project.body}
-							/>
-						);
-					})
-				}
-			</div>
-		</section>
-		<section id="contacts">
-			<h1>Contacts</h1>
-			<p>
-				Feel free to reach out to me on
+					<Social platform="Github" username="obashanova" />
+					<Social platform="Linkedin" username="in/oxana-bashanova" />
 
-				<Social platform="Github" username="obashanova" />
-				<Social platform="Linkedin" username="in/oxana-bashanova" />
-
-				or via <a
-					href="mailto: obashanova.dev@gmail.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="social-link"
-				>
-					Email</a
-				>.
-			</p>
-		</section>
-
-		<style>
-			.main-container {
-				position: absolute;
-				top: var(--top-offset);
-				width: calc(100% - var(--body-padding) * 2);
-
-				display: flex;
-				flex-direction: column;
-			}
-			h1 {
-				margin: 0;
-			}
-			section {
-				scroll-margin-top: var(--top-offset);
-				position: relative;
-				padding: 2rem 4rem;
-				height: fit-content;
-				min-height: calc(100vh - var(--top-offset) - 4rem);
-			}
-
-			p {
-				font-size: 1.3rem;
-				font-weight: lighter;
-				line-height: 2rem;
-				margin: 1rem 0;
-				@media screen and (max-width: 1024px) {
-					font-size: 1.1rem;
-					line-height: 1.8rem;
-				}
-			}
-			#intro {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-			}
-			.intro-container {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				@media screen and (max-width: 768px) {
-					flex-direction: column;
-				}
-			}
-			.intro-p {
-				width: 65%;
-				@media screen and (max-width: 768px) {
-					width: 100%;
-					order: 2;
-				}
-			}
-
-			.photo-container {
-				width: 35%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				@media screen and (max-width: 768px) {
-					width: 100%;
-					order: 1;
-				}
-			}
-			.photo {
-				width: 50%;
-				min-width: 200px;
-				aspect-ratio: 1 / 1;
-				border-radius: 50%;
-				overflow: clip;
-				background-image: url("../assets/images/photo.JPG");
-				background-size: cover;
-				background-position: center;
-			}
-			#about {
-				width: calc(100% - 8rem);
-				font-size: 1.3rem;
-				font-weight: lighter;
-				line-height: 2rem;
-				@media screen and (max-width: 1024px) {
-					font-size: 1.2rem;
-					line-height: 1.8rem;
-				}
-				@media screen and (max-width: 768px) {
-					padding: 2rem 2rem;
-				}
-			}
-
-			.gallery {
-				display: flex;
-				padding: 10px 0;
-				justify-content: space-between;
-				@media screen and (max-width: 1024px) {
-					flex-direction: column;
-				}
-			}
-		</style>
+					or via <a
+						href="mailto: obashanova.dev@gmail.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="social-link"
+					>
+						Email</a
+					>.
+				</p>
+			</section>
+		</div>
 	</div>
+
+	<style>
+		.main-container {
+			position: absolute;
+			top: var(--top-offset);
+			width: 100%;
+			height: calc(100% - var(--top-offset));
+			display: flex;
+			justify-content: space-between;
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+		}
+		.photo-container {
+			width: 30%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@media screen and (max-width: 768px) {
+				width: 100%;
+				order: 1;
+			}
+		}
+		.text-container {
+			position: relative;
+			width: 70%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			overflow-y: scroll;
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
+		}
+
+		section {
+			position: relative;
+			padding: 2rem 3rem;
+		}
+
+		#intro,
+		#contacts {
+			display: flex;
+			flex-direction: column;
+			min-height: calc(100% - 4rem);
+		}
+
+		#intro {
+			justify-content: center;
+		}
+
+		.intro-p {
+			@media screen and (max-width: 768px) {
+				width: 100%;
+				order: 2;
+			}
+		}
+
+		.photo {
+			width: 50%;
+			min-width: 200px;
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+			overflow: clip;
+			background-image: url("../assets/images/photo.JPG");
+			background-size: cover;
+			background-position: center;
+		}
+		#about {
+			font-size: 1.3rem;
+			font-weight: lighter;
+			line-height: 2rem;
+			@media screen and (max-width: 1024px) {
+				font-size: 1.2rem;
+				line-height: 1.8rem;
+			}
+		}
+
+		.gallery {
+			display: flex;
+			align-items: center;
+		}
+	</style>
 </Layout>
